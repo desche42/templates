@@ -1,0 +1,44 @@
+{
+	// https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Nuxt: dev",
+			"command": "npm run dev",
+			"request": "launch",
+			"type": "node-terminal",
+			"cwd": "${workspaceFolder}/nuxt"
+		},
+		{
+			"type": "pwa-chrome",
+			"request": "launch",
+			"name": "Nuxt client: chrome",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}/nuxt",
+			"userDataDir": true
+		},
+		{
+			"name": "FastAPI",
+			"type": "python",
+			"request": "launch",
+			"module": "uvicorn",
+			"cwd": "${workspaceFolder}/fastapi",
+			"args": [
+				"api.main:app",
+				"--reload",
+				"--port",
+				"5000"
+			]
+		}
+	],
+	"compounds": [
+		{
+			"name": "Full StApp",
+			"configurations": [
+				"Nuxt: dev",
+				"FastAPI",
+				"Nuxt client: chrome"
+			]
+		}
+	]
+}

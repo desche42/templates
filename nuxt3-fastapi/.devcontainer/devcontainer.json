@@ -1,0 +1,41 @@
+// See https://aka.ms/vscode-remote/devcontainer.json or
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3
+{
+	"name": "Nuxt3+FastAPI Boilerplate",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {}
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"python.pythonPath": "/usr/bin/python3",
+		"python.linting.pylintPath": "/usr/local/bin/pylint",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.formatting.blackPath": "/usr/local/bin/black",
+		"python.formatting.provider": "black",
+		"editor.formatOnSave": true,
+		"terminal.integrated.defaultProfile.linux": "bash"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"editorconfig.editorconfig",
+		"hbenl.vscode-test-explorer",
+		"littlefoxteam.vscode-python-test-adapter",
+		"eamodio.gitlens",
+		"damildrizzy.fastapi-snippets",
+		"yzhang.markdown-all-in-one",
+		"mechatroner.rainbow-csv"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		5000, 3000
+	],
+	"runArgs": [
+		"--env-file",
+		".env"
+	]
+}
