@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"hbenl.vscode-test-explorer",
+		"eamodio.gitlens",
+		"yzhang.markdown-all-in-one",
+		"mechatroner.rainbow-csv",
+		"octref.vetur",
+		"vuetifyjs.vuetify-vscode",
+		"irongeek.vscode-env",
+		"vue.volar"
+	]
+}

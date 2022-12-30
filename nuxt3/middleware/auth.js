@@ -1,0 +1,1 @@
+// Declare here auth methods

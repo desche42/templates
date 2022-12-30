@@ -1,0 +1,33 @@
+// See https://aka.ms/vscode-remote/devcontainer.json or
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3
+{
+	"name": "Nuxt3 Boilerplate",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {}
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"editor.formatOnSave": true,
+		"terminal.integrated.defaultProfile.linux": "bash"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"editorconfig.editorconfig",
+		"hbenl.vscode-test-explorer",
+		"eamodio.gitlens",
+		"yzhang.markdown-all-in-one",
+		"mechatroner.rainbow-csv",
+		"Vue.volar"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		5000, 3000
+	],
+	"runArgs": [
+		"--env-file",
+		".env"
+	]
+}
