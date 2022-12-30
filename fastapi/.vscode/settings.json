@@ -1,0 +1,27 @@
+{
+    "debug.allowBreakpointsEverywhere": true,
+    "python.linting.pylintPath": "/home/pn/.local/bin/pylint",
+    "python.formatting.blackPath": "/home/pn/.local/bin/black",
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--indent-string=\"    \"",
+        "--extension-pkg-whitelist='pydantic'"
+    ],
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.linting.enabled": true,
+    "python.autoComplete.extraPaths": [
+       "./fastapi",
+       "../fastapi"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.cwd": "../fastapi",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "vetur.dev.logLevel": "DEBUG",
+    "python.analysis.extraPaths": [
+        "./fastapi",
+        "../fastapi"
+    ],
+}
